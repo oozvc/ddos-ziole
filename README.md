@@ -26,7 +26,7 @@ udah itu aja
 
 		1. git clone https://github.com/oozvc/ddos-ziole.git
 
-		2. cd ddos by ziole 
+		2. cd ddos-ziole
 
 		3. python ddos ziole v3.py
 
