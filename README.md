@@ -13,7 +13,7 @@ instal ya nanti eror
 CARA PAKE 
 How to run: Win/Linux/KaliLinux
 
-1. git clone https://github.com/EmenstaNougat/DDoS-ByEmensta.git
+1. git clone https://github.com/oozvc/ddos-ziole.git
 2. cd DDoS-ByEmensta
 3. python DDoS-ByEmensta.py
 
