@@ -22,12 +22,13 @@ https://github.com/oozvc
 
 udah itu aja
 
+fist you must instal rich
+
+pip install rich
+
+to instal rich ∆
 
 				--------------------DDOS BY ZIOLE ONLY FOR TEST !!--------------------
-  
-   fist you must instal rich 
-
-   pip instal rich
 	How to run: Win/Linux/KaliLinux
 
 		1. git clone https://github.com/oozvc/ddos-ziole.git
