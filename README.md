@@ -24,9 +24,10 @@ udah itu aja
 
 
 				--------------------DDOS BY ZIOLE ONLY FOR TEST !!--------------------
-  fist you must instal rich
-  PIP install rich
+  
+   fist you must instal rich 
 
+   pip instal rich
 	How to run: Win/Linux/KaliLinux
 
 		1. git clone https://github.com/oozvc/ddos-ziole.git
