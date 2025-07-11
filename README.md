@@ -24,6 +24,8 @@ udah itu aja
 
 
 				--------------------DDOS BY ZIOLE ONLY FOR TEST !!--------------------
+  fist you must instal rich
+  PIP install rich
 
 	How to run: Win/Linux/KaliLinux
 
