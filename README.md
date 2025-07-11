@@ -31,7 +31,7 @@ udah itu aja
 
 		2. cd ddos-ziole
 
-		3. python ddos ziole v3.py
+		3. python3 'ddos ziole v3.py'
 
 
 	Note:
