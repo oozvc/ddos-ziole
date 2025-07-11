@@ -12,9 +12,7 @@ DDoS attacks serve malicious purposes, such as disrupting online services, causi
 5.pastikan network mu udah di forward jika menggunakan wifi
 6.!!! hargai developer !!!
 
-HARUS INSTAL RICH
-pip install rich
-instal ya nanti eror
+
 
 
 kunjungi github saya 
