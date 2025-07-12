@@ -12,6 +12,20 @@ DDoS attacks serve malicious purposes, such as disrupting online services, causi
 5.pastikan network mu udah di forward jika menggunakan wifi
 6.!!! hargai developer !!!
 
+penting
+
+harus python3.6+
+
+pip install --upgrade pip
+
+pip install requests websocket-client
+
+pkg update && pkg upgrade -y
+
+pkg install python git curl -y
+
+install command di atas
+
 
 
 
