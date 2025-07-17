@@ -22,7 +22,9 @@ penting
 
 # install requier before use
 
-harus python3.6+
+must python3.6+
+
+    apt install python3
 
     pip install --upgrade pip
 
