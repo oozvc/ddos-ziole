@@ -130,3 +130,6 @@ if __name__ == "__main__":
         print(f"\n{RED}[x] Dibatalkan user.{RESET}")
     except Exception as e:
         print(f"{RED}[x] ERROR: {e}{RESET}")
+# udah tinggal pake aja repot
+if __name__ == "__main__":
+    main()
