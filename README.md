@@ -5,6 +5,7 @@ DDoS attacks serve malicious purposes, such as disrupting online services, causi
 
 
  RULE!!
+ 
 1.tidak menggunakan ini secara sembarangan
 
 2.di peruntukan untuk test sahaja
