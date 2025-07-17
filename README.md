@@ -6,10 +6,15 @@ DDoS attacks serve malicious purposes, such as disrupting online services, causi
 
  RULE!!
 1.tidak menggunakan ini secara sembarangan
-2.di peruntukan untuk test sahaja 
+
+2.di peruntukan untuk test sahaja
+
 3.pastikan komputer mu kuat
+
 4.jangan di jual ini gratis
+
 5.pastikan network mu udah di forward jika menggunakan wifi
+
 6.!!! hargai developer !!!
 
 penting
