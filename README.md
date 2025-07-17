@@ -14,15 +14,17 @@ DDoS attacks serve malicious purposes, such as disrupting online services, causi
 
 penting
 
+# install requier before use
+
 harus python3.6+
 
-pip install --upgrade pip
+    pip install --upgrade pip
 
-pip install requests websocket-client
+    pip install requests websocket-client
 
-pkg update && pkg upgrade -y
+    apt update && apt upgrade -y
 
-pkg install python git curl -y
+    apt install python git curl -y
 
 install command di atas
 
@@ -36,21 +38,28 @@ udah itu aja
 
 fist you must instal rich
 
-pip install rich
+    pip install rich
 
 to instal rich ∆
 
-				--------------------DDOS BY ZIOLE ONLY FOR TEST !!--------------------
-	How to run: Win/Linux/KaliLinux
+# how to use
 
-		1. git clone https://github.com/oozvc/ddos-ziole.git
+    git clone https://github.com/oozvc/ddos-ziole.git
+    
+clone to my repo
 
-		2. cd ddos-ziole
+or you can use 
 
-		3. python3 'ddos ziole v3.py'
+    pip install ddos-ziole
 
+next	     
 
-	Note:
-		- on Windows systems use "CMD"
+    cd ddos-ziole
 
-		- on Debian based systems (Linux/KaliLinux) use "Terminal"
+how to run
+
+ex:
+
+    python3 ddosv14 
+
+you can use other version
