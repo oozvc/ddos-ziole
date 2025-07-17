@@ -54,7 +54,7 @@ to instal rich ∆
 
     git clone https://github.com/oozvc/ddos-ziole.git
     
-clone to my repo
+clone my repo
 
 or you can use 
 
