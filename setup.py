@@ -12,14 +12,14 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'requests',
-        'colorama',
-        'rich',
-        'psutil',
-        'pyfiglet'
-        'requests websocket-client'
-        # Tambahin modul lain yang dipake kalau ada
-    ],
+    'requests',
+    'colorama',
+    'rich',
+    'psutil',
+    'pyfiglet',
+    'websocket-client'
+],
+
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: BSD 3-Clause License',  # ganti kalo lo pake lisensi lain
